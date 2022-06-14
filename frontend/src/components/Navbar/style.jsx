@@ -4,10 +4,28 @@ export default styled.nav`
   height: 10vh;
   width: 100%;
   display: flex;
-  justify-content: space-around;
   align-items: center;
   position: fixed;
   bottom: 0;
-  border: 2px solid black;
   box-sizing: border-box;
+  background: var(--color-bg-secondary);
+  a {
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+  }
+  p {
+    font-weight: bold;
+    color: white;
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+  img {
+    width: 2rem;
+  }
+  ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
 `;
