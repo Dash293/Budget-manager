@@ -3,9 +3,9 @@ import SCategories from "./style";
 function Categories() {
   return (
     <SCategories>
-      <div>
+      <main>
         <p>Categories</p>
-      </div>
+      </main>
     </SCategories>
   );
 }

@@ -3,9 +3,9 @@ import SEditCategories from "./style";
 function EditCategories() {
   return (
     <SEditCategories>
-      <div>
+      <main>
         <p>Categories edition</p>
-      </div>
+      </main>
     </SEditCategories>
   );
 }

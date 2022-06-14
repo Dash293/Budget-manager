@@ -1,3 +1,10 @@
 import styled from "styled-components";
 
-export default styled.section``;
+export default styled.main`
+  background-color: var(--color-bg-primary);
+  box-sizing: border-box;
+  height: 80vh;
+  p {
+    color: white;
+  }
+`;

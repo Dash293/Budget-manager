@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import SettingsButton from "@components/Buttons/SettingsButton";
-import AddExpenseButton from "@components/Buttons/AddExpenseButton";
+import AddTransactionButton from "@components/Buttons/AddTransactionButton";
 import SHeader from "./style";
 
 export default function Header() {
@@ -8,9 +8,9 @@ export default function Header() {
     <SHeader>
       <SettingsButton />
       <Link to="/">
-        <h1>Activité</h1>
+        <h1>Nom de page</h1>
       </Link>
-      <AddExpenseButton />
+      <AddTransactionButton />
     </SHeader>
   );
 }
