@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom";
-import SAddExpenseButton from "./style";
+import SAddTransactionButton from "./style";
 import AddButton from "../../../assets/icons/add.png";
 
-export default function AddExpenseButton() {
+export default function AddTransactionButton() {
   return (
-    <SAddExpenseButton>
-      <Link to="/settings">
+    <SAddTransactionButton>
+      <Link to="/new-transaction">
         <img className="IconSettings" src={AddButton} alt="" />
       </Link>
-    </SAddExpenseButton>
+    </SAddTransactionButton>
   );
 }

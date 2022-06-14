@@ -3,9 +3,9 @@ import SHome from "./style";
 function Home() {
   return (
     <SHome>
-      <div>
-        <p>Home</p>
-      </div>
+      <main>
+        <p>Transactions</p>
+      </main>
     </SHome>
   );
 }

@@ -3,9 +3,9 @@ import SDashboard from "./style";
 function Dashboard() {
   return (
     <SDashboard>
-      <div>
+      <main>
         <p>Dashboard</p>
-      </div>
+      </main>
     </SDashboard>
   );
 }

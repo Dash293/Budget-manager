@@ -3,9 +3,9 @@ import SNewTransaction from "./style";
 function NewTransaction() {
   return (
     <SNewTransaction>
-      <div>
-        <p>New transaction</p>
-      </div>
+      <main>
+        <p>Nouvelle transaction</p>
+      </main>
     </SNewTransaction>
   );
 }
