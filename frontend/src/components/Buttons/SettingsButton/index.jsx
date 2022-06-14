@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import SSettingsButton from "./style";
-import SettingsIcon from "../../../assets/icons/settings.png";
+import SettingsIcon from "../../../assets/icons/cog.png";
 
 export default function SettingsButton() {
   return (

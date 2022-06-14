@@ -5,10 +5,15 @@ export default styled.header`
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   box-sizing: border-box;
-  background: linear-gradient(160deg, #ca98ff, #bb7cff);
-
-  .HeaderLogo {
-    height: 100%;
+  background: var(--color-bg-header-nav);
+  a {
+    text-decoration: none;
+  }
+  h1 {
+    font-weight: bold;
+    color: white;
+    font-size: 2rem;
   }
 `;

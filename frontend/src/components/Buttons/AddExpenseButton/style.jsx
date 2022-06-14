@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export default styled.div`
   img {
-    height: 40%;
+    width: 2rem;
+    margin-right: 1rem;
   }
 `;
