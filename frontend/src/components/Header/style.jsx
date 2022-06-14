@@ -4,11 +4,11 @@ export default styled.header`
   height: 10vh;
   width: 100%;
   display: flex;
-  justify-content: center;
-  border: 2px solid black;
+  justify-content: space-between;
   box-sizing: border-box;
+  background: linear-gradient(160deg, #ca98ff, #bb7cff);
 
-  img {
+  .HeaderLogo {
     height: 100%;
   }
 `;

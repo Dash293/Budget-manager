@@ -4,7 +4,7 @@ function Settings() {
   return (
     <SSettings>
       <div>
-        <p>New transaction</p>
+        <p>Settings</p>
       </div>
     </SSettings>
   );
