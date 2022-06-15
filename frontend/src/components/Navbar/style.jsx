@@ -15,13 +15,12 @@ export default styled.nav`
     justify-content: center;
   }
   p {
-    font-weight: bold;
     color: white;
     font-size: 1rem;
     margin-top: 1rem;
   }
   img {
-    width: 2rem;
+    width: 1.5rem;
   }
   ul {
     width: 100%;
