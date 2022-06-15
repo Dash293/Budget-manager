@@ -15,5 +15,6 @@ export default styled.header`
     font-weight: bold;
     color: white;
     font-size: 2rem;
+    font-family: var(--font-global);
   }
 `;

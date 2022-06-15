@@ -10,20 +10,14 @@ const GlobalStyle = createGlobalStyle`
   --color-font-primary: #e9eaea;
   --color-font-secondary: #ffffff; //for purple background 
   --color-gauge: #77cab2;
+  --font-global: 'Poppins', sans-serif;
 }
-  p,
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  a
-   {
-  }
+
   p {
+
   }
   h1 {
+
   }
   h2 {
   }

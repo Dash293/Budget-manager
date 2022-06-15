@@ -15,9 +15,11 @@ export default styled.nav`
     justify-content: center;
   }
   p {
-    color: white;
+    color: #bebebe;
     font-size: 1rem;
+    font-weight: bold;
     margin-top: 1rem;
+    font-family: var(--font-global);
   }
   img {
     width: 1.5rem;
