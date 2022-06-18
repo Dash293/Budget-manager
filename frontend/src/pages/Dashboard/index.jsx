@@ -3,9 +3,7 @@ import SDashboard from "./style";
 function Dashboard() {
   return (
     <SDashboard>
-      <main>
-        <p>Dashboard</p>
-      </main>
+      <p>Dashboard</p>
     </SDashboard>
   );
 }

@@ -3,9 +3,7 @@ import SSettings from "./style";
 function Settings() {
   return (
     <SSettings>
-      <main>
-        <p>Paramètres</p>
-      </main>
+      <p>Paramètres</p>
     </SSettings>
   );
 }
