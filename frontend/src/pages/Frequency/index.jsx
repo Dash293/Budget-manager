@@ -3,9 +3,7 @@ import SFrequency from "./style";
 function Frequency() {
   return (
     <SFrequency>
-      <div>
-        <p>Frequency</p>
-      </div>
+      <p>Frequency</p>
     </SFrequency>
   );
 }

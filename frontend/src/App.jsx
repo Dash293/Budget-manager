@@ -7,6 +7,7 @@ import Dashboard from "@pages/Dashboard";
 import EditCategories from "@pages/EditCategories";
 import NewTransaction from "@pages/NewTransaction";
 import Settings from "@pages/Settings";
+import Categories from "@pages/Categories";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/" element={<Home />} />;
           <Route path="/new-transaction" element={<NewTransaction />} />;
           <Route path="/dashboard" element={<Dashboard />} />;
+          <Route path="/categories" element={<Categories />} />;
           <Route path="/settings" element={<Settings />} />;
           <Route path="/edit-category" element={<EditCategories />} />;
           <Route path="/frequency" element={<Frequency />} />;
