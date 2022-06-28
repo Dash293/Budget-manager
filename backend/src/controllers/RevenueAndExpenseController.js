@@ -1,6 +1,6 @@
 const models = require("../models");
 
-class RevenueAndExpenceController {
+class RevenueAndExpenseController {
   static browse = (req, res) => {
     models.revenueAndExpense
       .findAll()
@@ -14,4 +14,4 @@ class RevenueAndExpenceController {
   };
 }
 
-module.exports = RevenueAndExpenceController;
+module.exports = RevenueAndExpenseController;

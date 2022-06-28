@@ -4,7 +4,7 @@ const {
   ItemController,
   UserController,
   CategoryController,
-  RevenueAndExpenceController,
+  RevenueAndExpenseController,
 } = require("./controllers");
 
 const router = express.Router();
@@ -16,6 +16,6 @@ router.post("/items", ItemController.add);
 router.delete("/items/:id", ItemController.delete);
 router.get("/users", UserController.browse);
 router.get("/categories", CategoryController.browse);
-router.get("/revenuesAndExpences", RevenueAndExpenceController.browse);
+router.get("/revenuesAndExpenses", RevenueAndExpenseController.browse);
 
 module.exports = router;
