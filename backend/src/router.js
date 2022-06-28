@@ -16,6 +16,6 @@ router.post("/items", ItemController.add);
 router.delete("/items/:id", ItemController.delete);
 router.get("/users", UserController.browse);
 router.get("/categories", CategoryController.browse);
-router.get("/revenuesAndExpenses", RevenueAndExpenseController.browse);
+router.get("/revenues-expenses", RevenueAndExpenseController.browse);
 
 module.exports = router;
