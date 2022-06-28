@@ -4,7 +4,7 @@ import SActivityCard from "./style";
 export default function ActivityCard({ name, amount, logo, date }) {
   return (
     <SActivityCard>
-      <div className="cardOfLesson">
+      <div className="activityCard">
         <img className="logo" src={logo} alt="logo de catégorie" />
         <div className="informations">
           <h1 className="name"> {name}</h1>
