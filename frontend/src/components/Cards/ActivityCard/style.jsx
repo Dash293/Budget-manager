@@ -15,7 +15,7 @@ export default styled.section`
     margin-right: 0.8rem;
   }
   h1 {
-    font: var(--color-font-primary);
+    color: var(--color-font-primary);
     font-weight: 500;
     align-items: center;
     font-size: 1.2rem;
@@ -23,14 +23,9 @@ export default styled.section`
     white-space: nowrap;
     overflow: hidden;
   }
-  h3 {
-    font: var(--color-font-primary);
-    align-items: center;
-    font-size: 1.1rem;
-    font-weight: 300;
-  }
+
   h2 {
-    font: var(--color-font-primary);
+    color: var(--color-font-primary);
     height: 3vh;
     position: absolute;
     right: 20px;

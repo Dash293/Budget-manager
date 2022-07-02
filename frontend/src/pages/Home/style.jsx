@@ -5,6 +5,6 @@ export default styled.main`
   box-sizing: border-box;
   height: 80vh;
   p {
-    color: white;
+    color: var(--color-icons-font);
   }
 `;

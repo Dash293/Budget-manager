@@ -1,7 +1,8 @@
 import propTypes from "prop-types";
+import logo from "@assets/icons/housing.png";
 import SActivityCard from "./style";
 
-export default function ActivityCard({ name, amount, logo, date }) {
+export default function ActivityCard({ name, amount, date }) {
   return (
     <SActivityCard>
       <div className="activityCard">
@@ -17,7 +18,6 @@ export default function ActivityCard({ name, amount, logo, date }) {
 }
 
 ActivityCard.propTypes = {
-  logo: propTypes.string.isRequired,
   name: propTypes.string.isRequired,
   date: propTypes.string.isRequired,
   amount: propTypes.number.isRequired,
