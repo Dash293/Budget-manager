@@ -1,8 +1,8 @@
 const models = require("../models");
 
-class CategoryController {
+class ActivityController {
   static browse = (req, res) => {
-    models.category
+    models.activity
       .findAll()
       .then(([rows]) => {
         res.send(rows);
@@ -14,4 +14,4 @@ class CategoryController {
   };
 }
 
-module.exports = CategoryController;
+module.exports = ActivityController;
