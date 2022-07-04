@@ -8,4 +8,8 @@ export default styled.main`
   .title {
     color: var(--color-font-primary);
   }
+
+  @media screen and (min-width: 700px) {
+    height: 81vh;
+  }
 `;
