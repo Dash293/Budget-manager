@@ -12,22 +12,5 @@ const GlobalStyle = createGlobalStyle`
   --color-gauge: #77cab2;
   --font-global: 'Poppins', sans-serif;
 }
-
-  p {
-
-  }
-  h1 {
-
-  }
-  h2 {
-  }
-  h3 {
-  }
-  h4 {
-  }
-  h5 {
-  }
-  h6 {
-  }
  `;
 export default GlobalStyle;
