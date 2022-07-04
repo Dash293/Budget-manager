@@ -8,7 +8,7 @@ export default function ActivityCard({ name, amount, logo, date }) {
         <img className="logo" src={logo} alt="logo de catégorie" />
         <div className="informations">
           <h1 className="name"> {name}</h1>
-          <h2 className="amount"> {amount}</h2>
+          <h2 className="amount"> {amount} €</h2>
           <p className="date"> {date}</p>
         </div>
       </div>
@@ -20,5 +20,5 @@ ActivityCard.propTypes = {
   name: propTypes.string.isRequired,
   logo: propTypes.string.isRequired,
   date: propTypes.string.isRequired,
-  amount: propTypes.number.isRequired,
+  amount: propTypes.string.isRequired,
 };
