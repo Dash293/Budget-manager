@@ -20,7 +20,6 @@ function Home() {
 
   return (
     <SHome>
-      <p>Transactions</p>
       {activities.map((activity) => (
         <ActivityCard
           key={activity.id}
