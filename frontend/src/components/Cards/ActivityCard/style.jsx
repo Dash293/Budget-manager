@@ -1,33 +1,34 @@
 import styled from "styled-components";
 
 export default styled.section`
+  display: flex;
+  justify-content: center;
+
   .activityCard {
     display: flex;
     align-items: center;
+    border: 2px solid #bebebe;
+    font-family: var(--font-global);
+    color: var(--color-font-primary);
+    border-radius: 30px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    width: 90vw;
   }
-  .informations {
-    margin: 10px;
-    width: 70%;
-  }
+
   .logo {
     height: 3vh;
-    margin-left: 2rem;
-    margin-right: 0.8rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
   h1 {
-    color: var(--color-font-primary);
-    font-weight: 500;
     align-items: center;
-    font-size: 1.2rem;
     text-overflow: ellipsis;
-    white-space: nowrap;
     overflow: hidden;
   }
 
   h2 {
-    color: var(--color-font-primary);
     height: 3vh;
-    position: absolute;
     right: 20px;
   }
 `;
