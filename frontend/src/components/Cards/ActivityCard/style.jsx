@@ -7,7 +7,7 @@ export default styled.section`
   .activityCard {
     display: flex;
     align-items: center;
-    border: 2px solid #bebebe;
+    border: 2px solid var(--color-icons-font);
     font-family: var(--font-global);
     color: var(--color-font-primary);
     border-radius: 30px;
@@ -16,19 +16,27 @@ export default styled.section`
     width: 90vw;
   }
 
+  .informations {
+    width: 100%;
+  }
+
   .logo {
     height: 3vh;
     margin-left: 1rem;
     margin-right: 1rem;
   }
-  h1 {
-    align-items: center;
-    text-overflow: ellipsis;
-    overflow: hidden;
+
+  .name {
+    margin-top: 0.5rem;
   }
 
-  h2 {
-    height: 3vh;
-    right: 20px;
+  .amount {
+    margin-right: 1rem;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .date {
+    margin-bottom: 0.5rem;
   }
 `;
