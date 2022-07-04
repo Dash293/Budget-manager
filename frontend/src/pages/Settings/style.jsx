@@ -4,7 +4,8 @@ export default styled.main`
   background-color: var(--color-bg-primary);
   box-sizing: border-box;
   height: 80vh;
-  p {
-    color: white;
+
+  .title {
+    color: var(--color-font-primary);
   }
 `;

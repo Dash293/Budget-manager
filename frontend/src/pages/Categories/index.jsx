@@ -3,7 +3,7 @@ import SCategories from "./style";
 function Categories() {
   return (
     <SCategories>
-      <p>Categories</p>
+      <h1 className="title">Categories</h1>
     </SCategories>
   );
 }

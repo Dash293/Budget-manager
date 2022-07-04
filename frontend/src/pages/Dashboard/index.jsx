@@ -3,7 +3,7 @@ import SDashboard from "./style";
 function Dashboard() {
   return (
     <SDashboard>
-      <p>Dashboard</p>
+      <h1 className="title">Dashboard</h1>
     </SDashboard>
   );
 }
