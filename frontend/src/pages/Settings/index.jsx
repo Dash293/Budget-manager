@@ -3,7 +3,7 @@ import SSettings from "./style";
 function Settings() {
   return (
     <SSettings>
-      <p>Paramètres</p>
+      <h1 className="title">Paramètres</h1>
     </SSettings>
   );
 }
