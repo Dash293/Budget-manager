@@ -1,4 +1,5 @@
 import ActivityCard from "@components/Cards/ActivityCard";
+import Calendar from "@components/Calendar/";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { DateTime } from "luxon";
@@ -20,6 +21,7 @@ function Home() {
 
   return (
     <SHome>
+      <Calendar />
       {activities.map((activity) => (
         <ActivityCard
           key={activity.id}
