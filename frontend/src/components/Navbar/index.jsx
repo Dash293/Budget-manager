@@ -8,24 +8,24 @@ export default function Navbar() {
   return (
     <SNavbar>
       <ul>
-        <li>
-          <Link to="/">
+        <Link to="/">
+          <li>
             <img className="iconActivity" src={ActivityIcon} alt="" />
-          </Link>
-          <p>Activité</p>
-        </li>
-        <li>
-          <Link to="/dashboard">
+            <p>Activité</p>
+          </li>
+        </Link>
+        <Link to="/dashboard">
+          <li>
             <img className="iconDashboard" src={DashboardIcon} alt="" />
-          </Link>
-          <p>Budget</p>
-        </li>
-        <li>
-          <Link to="/categories">
+            <p>Budget</p>
+          </li>
+        </Link>
+        <Link to="/categories">
+          <li>
             <img className="iconCategories" src={CategoriesIcon} alt="" />
-          </Link>
-          <p>Catégories</p>
-        </li>
+            <p>Catégories</p>
+          </li>
+        </Link>
       </ul>
     </SNavbar>
   );
