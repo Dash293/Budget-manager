@@ -8,7 +8,7 @@ export default function Header() {
     <SHeader>
       <SettingsButton />
       <Link to="/">
-        <h1>Nom de page</h1>
+        <h1>BM</h1>
       </Link>
       <AddTransactionButton />
     </SHeader>
