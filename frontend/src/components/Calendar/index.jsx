@@ -19,7 +19,7 @@ export default function Calendar() {
   const [selectedMonth, setSelectedMonth] = useState(6);
   const [selectedYear, setSelectedYear] = useState(2022);
 
-  const handleMonthOnClick = () => {
+  const handleOnClick = () => {
     if (selectedMonth === month.length - 1) {
       setSelectedYear(selectedYear + 1);
       setSelectedMonth(0);
@@ -29,7 +29,7 @@ export default function Calendar() {
   };
 
   return (
-    <button type="button" onClick={handleMonthOnClick}>
+    <button type="button" onClick={handleOnClick}>
       {month[selectedMonth]} {selectedYear}
     </button>
   );
