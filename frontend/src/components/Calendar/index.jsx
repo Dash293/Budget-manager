@@ -16,40 +16,21 @@ export default function Calendar() {
     "Decembre",
   ];
 
-  const year = [
-    "2022",
-    "2023",
-    "2024",
-    "2025",
-    "2026",
-    "2027",
-    "2028",
-    "2029",
-    "2030",
-    "2031",
-    "2032",
-  ];
-
   const [selectedMonth, setSelectedMonth] = useState(6);
-  const [selectedYear, setSelectedYear] = useState(0);
+  const [selectedYear, setSelectedYear] = useState(2022);
 
   const handleMonthOnClick = () => {
-    setSelectedMonth((currentMonth) => {
-      if (currentMonth === month.length - 1) {
-        return (
-          0 &&
-          setSelectedYear((currentYear) => {
-            return currentYear + 1;
-          })
-        );
-      }
-      return currentMonth + 1;
-    });
+    if (selectedMonth === month.length - 1) {
+      setSelectedYear(selectedYear + 1);
+      setSelectedMonth(0);
+    } else {
+      setSelectedMonth(selectedMonth + 1);
+    }
   };
 
   return (
     <button type="button" onClick={handleMonthOnClick}>
-      {month[selectedMonth]} {year[selectedYear]}
+      {month[selectedMonth]} {selectedYear}
     </button>
   );
 }
