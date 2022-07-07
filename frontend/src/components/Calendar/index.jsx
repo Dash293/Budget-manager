@@ -1,4 +1,5 @@
 import { useState } from "react";
+import SCalendar from "./style";
 
 export default function Calendar() {
   const month = [
@@ -16,10 +17,10 @@ export default function Calendar() {
     "Decembre",
   ];
 
-  const [selectedMonth, setSelectedMonth] = useState(6);
+  const [selectedMonth, setSelectedMonth] = useState(5);
   const [selectedYear, setSelectedYear] = useState(2022);
 
-  const handleOnClick = () => {
+  const next = () => {
     if (selectedMonth === month.length - 1) {
       setSelectedYear(selectedYear + 1);
       setSelectedMonth(0);
@@ -28,9 +29,26 @@ export default function Calendar() {
     }
   };
 
+  const previous = () => {
+    if (selectedMonth === 0) {
+      setSelectedYear(selectedYear - 1);
+      setSelectedMonth(11);
+    } else {
+      setSelectedMonth(selectedMonth - 1);
+    }
+  };
+
   return (
-    <button type="button" onClick={handleOnClick}>
-      {month[selectedMonth]} {selectedYear}
-    </button>
+    <SCalendar>
+      <button type="button" onClick={previous}>
+        {"<"}
+      </button>
+      <div className="monthAndYear">
+        {month[selectedMonth]} {selectedYear}
+      </div>
+      <button type="button" onClick={next}>
+        {">"}
+      </button>
+    </SCalendar>
   );
 }
