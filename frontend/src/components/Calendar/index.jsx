@@ -1,5 +1,7 @@
 import { useState } from "react";
 import SCalendar from "./style";
+import NextIcon from "../../assets/icons/next.svg";
+import PreviousIcon from "../../assets/icons/previous.svg";
 
 export default function Calendar() {
   const month = [
@@ -40,15 +42,17 @@ export default function Calendar() {
 
   return (
     <SCalendar>
-      <button type="button" onClick={previous}>
-        {"<"}
-      </button>
-      <div className="monthAndYear">
-        {month[selectedMonth]} {selectedYear}
+      <div className="calendar">
+        <button type="button" onClick={previous}>
+          <img className="previousIcon" src={PreviousIcon} alt="précédent" />
+        </button>
+        <div className="monthAndYear">
+          {month[selectedMonth]} {selectedYear}
+        </div>
+        <button type="button" onClick={next}>
+          <img className="nextIcon" src={NextIcon} alt="suivant" />
+        </button>
       </div>
-      <button type="button" onClick={next}>
-        {">"}
-      </button>
     </SCalendar>
   );
 }
