@@ -1,9 +1,10 @@
 import ActivityCard from "@components/Cards/ActivityCard";
-import Calendar from "@components/Calendar/";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { DateTime } from "luxon";
 import SHome from "./style";
+import NextIcon from "../../assets/icons/next.svg";
+import PreviousIcon from "../../assets/icons/previous.svg";
 
 function Home() {
   const [activities, setActivities] = useState([]);
@@ -14,6 +15,27 @@ function Home() {
         setActivities(data);
       });
   }, []);
+  const [selectedMonth, setSelectedMonth] = useState(1);
+  const [selectedYear, setSelectedYear] = useState(2022);
+  const getDate = () => {
+    return `${String(selectedMonth).padStart(2, "0")}/${selectedYear}`;
+  };
+  const next = () => {
+    if (selectedMonth === 12) {
+      setSelectedYear(selectedYear + 1);
+      setSelectedMonth(1);
+    } else {
+      setSelectedMonth(selectedMonth + 1);
+    }
+  };
+  const previous = () => {
+    if (selectedMonth === 1) {
+      setSelectedYear(selectedYear - 1);
+      setSelectedMonth(12);
+    } else {
+      setSelectedMonth(selectedMonth - 1);
+    }
+  };
 
   function date(d) {
     return `${DateTime.fromISO(d).setLocale("fr").toFormat("dd/MM/yyyy")}`;
@@ -21,16 +43,28 @@ function Home() {
 
   return (
     <SHome>
-      <Calendar />
-      {activities.map((activity) => (
-        <ActivityCard
-          key={activity.id}
-          name={activity.name}
-          date={`${date(activity.date)}`}
-          amount={activity.amount}
-          logo={activity.logo}
-        />
-      ))}
+      <div className="calendar">
+        <button type="button" onClick={previous}>
+          <img className="previousIcon" src={PreviousIcon} alt="précédent" />
+        </button>
+        <div className="monthAndYear">{getDate()}</div>
+        <button type="button" onClick={next}>
+          <img className="nextIcon" src={NextIcon} alt="suivant" />
+        </button>
+      </div>
+      {activities
+        .filter((activity) => {
+          return date(activity.date).includes(getDate());
+        })
+        .map((activity) => (
+          <ActivityCard
+            key={activity.id}
+            name={activity.name}
+            date={`${date(activity.date)}`}
+            amount={activity.amount}
+            logo={activity.logo}
+          />
+        ))}
     </SHome>
   );
 }

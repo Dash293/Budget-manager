@@ -11,8 +11,7 @@ export default styled.section`
     font-family: var(--font-global);
     color: var(--color-font-primary);
     border-radius: 30px;
-    margin-bottom: 5px;
-    margin-top: 5px;
+    margin-bottom: 0.5rem;
     width: 90vw;
   }
 
@@ -38,5 +37,9 @@ export default styled.section`
 
   .date {
     margin-bottom: 0.5rem;
+  }
+
+  @media screen and (min-width: 700px) {
+    width: 50vw;
   }
 `;
