@@ -5,7 +5,8 @@ import Navbar from "@components/Navbar";
 import Frequency from "@pages/Frequency";
 import Dashboard from "@pages/Dashboard";
 import EditCategories from "@pages/EditCategories";
-import NewTransaction from "@pages/NewTransaction";
+import AddExpense from "@pages/AddExpense";
+import AddRevenue from "@pages/AddRevenue";
 import Settings from "@pages/Settings";
 import Categories from "@pages/Categories";
 
@@ -16,7 +17,8 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<Home />} />;
-          <Route path="/new-transaction" element={<NewTransaction />} />;
+          <Route path="/add-expense" element={<AddExpense />} />;
+          <Route path="/add-revenue" element={<AddRevenue />} />;
           <Route path="/dashboard" element={<Dashboard />} />;
           <Route path="/categories" element={<Categories />} />;
           <Route path="/settings" element={<Settings />} />;

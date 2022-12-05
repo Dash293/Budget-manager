@@ -5,8 +5,17 @@ class RevenueAndExpenseManager extends AbstractManager {
 
   insert(revenueAndExpense) {
     return this.connection.query(
-      `insert into ${RevenueAndExpenseManager.table} (title) values (?)`,
-      [revenueAndExpense.title]
+      `insert into ${RevenueAndExpenseManager.table} (category_name, type_id, date, note, amount, user_id, category_id, category_user_id) values (?, ?, ?, ?, ?, ?, ?, ?)`,
+      [
+        revenueAndExpense.category_name,
+        revenueAndExpense.type_id,
+        revenueAndExpense.date,
+        revenueAndExpense.note,
+        revenueAndExpense.amount,
+        revenueAndExpense.user_id,
+        revenueAndExpense.category_id,
+        revenueAndExpense.category_user_id,
+      ]
     );
   }
 

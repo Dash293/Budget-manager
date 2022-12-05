@@ -5,7 +5,7 @@ import AddButton from "../../../assets/icons/add.png";
 export default function AddTransactionButton() {
   return (
     <SAddTransactionButton>
-      <Link to="/new-transaction">
+      <Link to="/add-expense">
         <img className="IconSettings" src={AddButton} alt="" />
       </Link>
     </SAddTransactionButton>
