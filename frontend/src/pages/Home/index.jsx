@@ -61,6 +61,7 @@ function Home() {
             key={activity.id}
             name={activity.name}
             date={`${date(activity.date)}`}
+            operator={activity.type_id === 1 ? "-" : "+"}
             amount={activity.amount}
             logo={activity.logo}
           />
