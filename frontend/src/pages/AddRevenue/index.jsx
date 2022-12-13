@@ -3,6 +3,10 @@ import { Link } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import { Bounce, Flip, toast } from "react-toastify";
 import SAddRevenue from "./style";
+import CategoriesIcon from "../../assets/icons/categoriesIconGrey.svg";
+import CalendarIcon from "../../assets/icons/calendarGrey.svg";
+import NoteIcon from "../../assets/icons/noteGrey.svg";
+import RepeatIcon from "../../assets/icons/repeatGrey.svg";
 
 function AddRevenue() {
   const [categories, setCategories] = useState([]);
@@ -76,13 +80,23 @@ function AddRevenue() {
 
   return (
     <SAddRevenue>
-      <h1 className="title">Nouvelle transaction</h1>
-      <Link to="/add-expense">
-        <button type="button">Saisir une dépense</button>
-      </Link>
+      <div className="typeButtonContainer">
+        <Link to="/add-expense">
+          <button className="formTypeButton" type="button">
+            Saisir une dépense
+          </button>
+        </Link>
+      </div>
       <form className="form" action="" onSubmit={hSubmit}>
+        <div className="line-2" />
         <div className="category">
+          <img
+            className="Icons"
+            src={CategoriesIcon}
+            alt="logo désignant des catégories"
+          />
           <select
+            className="selectInput"
             value={formData.category_name}
             name="category_name"
             onChange={(e) => {
@@ -98,16 +112,22 @@ function AddRevenue() {
               ))}
           </select>
         </div>
+        <div className="line-1" />
         <div className="date">
+          <img className="Icons" src={CalendarIcon} alt="logo de calendrier" />
           <input
+            className="calendarInput"
             type="date"
             value={formData.date}
             name="date"
             onChange={hChange2}
           />
         </div>
+        <div className="line-1" />
         <div className="note">
+          <img className="Icons" src={NoteIcon} alt="logo catégorie" />
           <input
+            className="noteInput"
             type="text"
             value={formData.note}
             name="note"
@@ -115,17 +135,22 @@ function AddRevenue() {
             placeholder="notes"
           />
         </div>
+        <div className="line-1" />
         <div className="repeat">
+          <img className="Icons" src={RepeatIcon} alt="logo catégorie" />
           Répéter{" "}
           <input
+            className="repeatInput"
             type="checkbox"
             value={formData.repeat}
             name="repeat"
             onChange={hChange2}
           />
         </div>
+        <div className="line-1" />
         <div className="amount">
           <input
+            className="amountInput"
             type="number"
             value={formData.amount}
             name="amount"
@@ -133,8 +158,9 @@ function AddRevenue() {
             placeholder="+ 10 €"
           />
         </div>
-        <div className="submit">
-          <button type="submit" onClick={hSubmit}>
+        <div className="line-1" />
+        <div className="submitContainer">
+          <button className="submitButton" type="submit" onClick={hSubmit}>
             Enregistrer
           </button>
         </div>
