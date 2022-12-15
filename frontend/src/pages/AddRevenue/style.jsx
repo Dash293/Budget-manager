@@ -42,6 +42,8 @@ export default styled.main`
     color: var(--color-bg-primary);
     border-radius: 10px;
     border: solid 2px #bebebe;
+    text-align: center;
+    width: 35%;
   }
 
   .category {
@@ -59,6 +61,8 @@ export default styled.main`
     color: var(--color-bg-primary);
     border-radius: 10px;
     border: solid 2px #bebebe;
+    text-align: center;
+    width: 35%;
   }
 
   .Icons {

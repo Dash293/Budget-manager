@@ -9,11 +9,13 @@ import NoteIcon from "../../assets/icons/noteGrey.svg";
 import RepeatIcon from "../../assets/icons/repeatGrey.svg";
 
 function AddRevenue() {
+  const date = new Date();
+  const today = date.toISOString().slice(0, 10);
   const [categories, setCategories] = useState([]);
   const [formData, setFormData] = useState({
     category_name: "",
     type: "dépense",
-    date: "",
+    date: today,
     note: "",
     amount: "",
     user_id: 1,
@@ -103,6 +105,7 @@ function AddRevenue() {
               hChange(e);
             }}
           >
+            <option value="none">Catégorie</option>
             {categories
               .filter((category) => category.type_id === 2)
               .map((category) => (
