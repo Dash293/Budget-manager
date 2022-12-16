@@ -7,6 +7,7 @@ import NextIcon from "../../assets/icons/next.svg";
 import PreviousIcon from "../../assets/icons/previous.svg";
 
 function Home() {
+  const calendarDate = new Date();
   const [activities, setActivities] = useState([]);
   useEffect(() => {
     axios
@@ -15,8 +16,10 @@ function Home() {
         setActivities(data);
       });
   }, []);
-  const [selectedMonth, setSelectedMonth] = useState(1);
-  const [selectedYear, setSelectedYear] = useState(2022);
+  const [selectedMonth, setSelectedMonth] = useState(
+    calendarDate.getMonth() + 1
+  );
+  const [selectedYear, setSelectedYear] = useState(calendarDate.getFullYear());
   const getDate = () => {
     return `${String(selectedMonth).padStart(2, "0")}/${selectedYear}`;
   };
