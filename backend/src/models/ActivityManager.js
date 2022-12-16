@@ -5,7 +5,7 @@ class ActivityManager extends AbstractManager {
 
   findAll() {
     return this.connection.query(
-      `select * from category INNER JOIN revenueAndExpense ON category.id = revenueAndExpense.category_id`
+      `select * from category INNER JOIN revenueAndExpense ON category.id = revenueAndExpense.category_id order by date asc`
     );
   }
 }
