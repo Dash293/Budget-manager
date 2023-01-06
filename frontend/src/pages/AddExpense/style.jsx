@@ -45,6 +45,9 @@ export default styled.main`
     text-align: center;
     font-style: bold;
     width: 35%;
+    option[value=""][disabled] {
+      display: none;
+    }
   }
 
   .category {

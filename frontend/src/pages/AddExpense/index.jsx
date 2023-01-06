@@ -105,7 +105,9 @@ function AddExpense() {
               hChange(e);
             }}
           >
-            <option value="none">Catégorie</option>
+            <option value="" disabled selected>
+              Catégorie
+            </option>
             {categories
               .filter((category) => category.type_id === 1)
               .map((category) => (

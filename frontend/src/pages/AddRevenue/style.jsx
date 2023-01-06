@@ -44,6 +44,9 @@ export default styled.main`
     border: solid 2px #bebebe;
     text-align: center;
     width: 35%;
+    option[value=""][disabled] {
+      display: none;
+    }
   }
 
   .category {

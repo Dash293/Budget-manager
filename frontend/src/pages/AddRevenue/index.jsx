@@ -105,7 +105,9 @@ function AddRevenue() {
               hChange(e);
             }}
           >
-            <option value="none">Catégorie</option>
+            <option value="" disabled selected>
+              Catégorie
+            </option>
             {categories
               .filter((category) => category.type_id === 2)
               .map((category) => (
