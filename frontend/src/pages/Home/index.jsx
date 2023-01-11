@@ -1,5 +1,6 @@
 import ActivityCard from "@components/Cards/ActivityCard";
 import axios from "axios";
+import { Link } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import { DateTime } from "luxon";
 import SHome from "./style";
@@ -60,14 +61,15 @@ function Home() {
           return date(activity.date).includes(getDate());
         })
         .map((activity) => (
-          <ActivityCard
-            key={activity.id}
-            name={activity.name}
-            date={`${date(activity.date)}`}
-            operator={activity.type_id === 1 ? "-" : "+"}
-            amount={activity.amount}
-            logo={activity.logo}
-          />
+          <Link to={`/activity-detail/${activity.id}`}>
+            <ActivityCard
+              key={activity.name}
+              date={`${date(activity.date)}`}
+              operator={activity.type_id === 1 ? "-" : "+"}
+              amount={activity.amount}
+              logo={activity.logo}
+            />
+          </Link>
         ))}
     </SHome>
   );

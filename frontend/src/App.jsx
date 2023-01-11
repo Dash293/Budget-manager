@@ -9,6 +9,7 @@ import AddExpense from "@pages/AddExpense";
 import AddRevenue from "@pages/AddRevenue";
 import Settings from "@pages/Settings";
 import Categories from "@pages/Categories";
+import ActivityDetail from "@pages/ActivityDetails";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/" element={<Home />} />;
           <Route path="/add-expense" element={<AddExpense />} />;
           <Route path="/add-revenue" element={<AddRevenue />} />;
+          <Route path="/activity-detail/:id" element={<ActivityDetail />} />;
           <Route path="/dashboard" element={<Dashboard />} />;
           <Route path="/categories" element={<Categories />} />;
           <Route path="/settings" element={<Settings />} />;
