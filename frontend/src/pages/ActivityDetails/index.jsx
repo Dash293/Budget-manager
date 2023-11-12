@@ -2,8 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { DateTime } from "luxon";
-import TrashLogo from "@assets/icons/trash.png";
-import ActivityDetailsCard from "@components/Cards/ActivityDetailsCard";
+import ActivityDetailsCard from "../../components/Cards/ActivityDetailsCard";
 import SActivityDetails from "./style";
 
 function ActivityDetails() {
@@ -30,7 +29,7 @@ function ActivityDetails() {
         operator={details.type_id === 1 ? "-" : "+"}
         amount={details.amount}
         logo={details.logo}
-        trashLogo={TrashLogo}
+        trashLogo={details.logo}
         note={details.note}
       />
     </SActivityDetails>

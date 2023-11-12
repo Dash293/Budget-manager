@@ -4,15 +4,36 @@ export default styled.section`
   display: flex;
   justify-content: center;
 
-  .activityCard {
+  .activityCardSection1 {
     display: flex;
     align-items: center;
     border: 2px solid var(--color-icons-font);
     font-family: var(--font-global);
     color: var(--color-font-primary);
     border-radius: 30px;
+    width: 70vw;
+    height: 50vh;
+  }
+
+  .activityCardSection2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+    width: 10vw;
+    margin-top: 3rem;
+  }
+
+  .activityCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--font-global);
+    color: var(--color-font-primary);
+    border-radius: 30px;
     margin-bottom: 0.5rem;
-    width: 90vw;
+    width: 70vw;
+    height: 30vh;
   }
 
   .informations {
@@ -30,13 +51,15 @@ export default styled.section`
   }
 
   .amount {
-    margin-right: 1rem;
-    display: flex;
-    justify-content: flex-end;
+    margin-top: 0.5rem;
   }
 
   .date {
-    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+  }
+
+  .note {
+    margin-top: 0.5rem;
   }
 
   @media screen and (min-width: 700px) {

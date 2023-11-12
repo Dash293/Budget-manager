@@ -6,7 +6,7 @@ export default function AddTransactionButton() {
   return (
     <SAddTransactionButton>
       <Link to="/add-expense">
-        <img className="IconSettings" src={AddButton} alt="" />
+        <img src={AddButton} alt="" />
       </Link>
     </SAddTransactionButton>
   );
