@@ -9,6 +9,10 @@ export default styled.main`
   align-items: center;
   font-family: var(--font-global);
 
+  a {
+    text-decoration: none;
+  }
+
   .calendar {
     display: flex;
     align-items: center;

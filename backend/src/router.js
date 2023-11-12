@@ -20,5 +20,6 @@ router.get("/categories", CategoryController.browse);
 router.get("/revenues-expenses", RevenueAndExpenseController.browse);
 router.post("/new-activity", RevenueAndExpenseController.add);
 router.get("/activity", ActivityController.browse);
+router.get("/activity/:id", ActivityController.read);
 
 module.exports = router;
