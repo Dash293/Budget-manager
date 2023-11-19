@@ -34,7 +34,6 @@ function LoginPage() {
   return (
     <AuthContainer>
       <Form onSubmit={handleLogin}>
-        <h2>Connexion</h2>
         <Input
           type="text"
           value={email}
