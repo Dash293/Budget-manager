@@ -18,15 +18,15 @@ function AddExpense() {
     date: today,
     note: "",
     amount: "",
-    user_id: 1,
     category_id: "",
-    category_user_id: 1,
     type_id: 1,
   });
 
   useEffect(() => {
     axios
-      .get(`${import.meta.env.VITE_BACKEND_URL}${"/categories"}`)
+      .get(`${import.meta.env.VITE_BACKEND_URL}${"/categories"}`, {
+        withCredentials: true,
+      })
       .then(({ data }) => {
         setCategories(data);
       });
@@ -51,7 +51,9 @@ function AddExpense() {
   const hSubmit = (evt) => {
     evt.preventDefault();
     axios
-      .post(`${import.meta.env.VITE_BACKEND_URL}${"/new-activity"}`, formData)
+      .post(`${import.meta.env.VITE_BACKEND_URL}${"/new-activity"}`, formData, {
+        withCredentials: true,
+      })
       .then(() => {
         toast.success("Votre transaction a bien été enregistrée", {
           position: "top-center",

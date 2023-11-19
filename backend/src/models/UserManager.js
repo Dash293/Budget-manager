@@ -5,8 +5,15 @@ class UserManager extends AbstractManager {
 
   insert(user) {
     return this.connection.query(
-      `insert into ${UserManager.table} (title) values (?)`,
-      [user.title]
+      `insert into ${UserManager.table} (name, email, password) values (?, ?, ?)`,
+      [user.name, user.email, user.password]
+    );
+  }
+
+  selectByEmail(email) {
+    return this.connection.query(
+      `SELECT * FROM ${this.table} WHERE email = ?`,
+      [email]
     );
   }
 

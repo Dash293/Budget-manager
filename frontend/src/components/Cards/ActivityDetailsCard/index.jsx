@@ -1,6 +1,5 @@
 import propTypes from "prop-types";
 import SActivityDetailsCard from "./style";
-import RemoveButton from "../../Buttons/RemoveButton";
 
 export default function ActivityDetailsCard({
   name,
@@ -9,6 +8,7 @@ export default function ActivityDetailsCard({
   logo,
   date,
   note,
+  onRemove,
 }) {
   return (
     <SActivityDetailsCard>
@@ -25,7 +25,9 @@ export default function ActivityDetailsCard({
           </div>
         </div>
         <div className="activityCardSection2">
-          <RemoveButton className="removeButton" />
+          <button type="button" className="remove" onClick={onRemove}>
+            supprimer
+          </button>
         </div>
       </div>
     </SActivityDetailsCard>
@@ -39,4 +41,5 @@ ActivityDetailsCard.propTypes = {
   amount: propTypes.string.isRequired,
   operator: propTypes.string.isRequired,
   note: propTypes.string.isRequired,
+  onRemove: propTypes.func.isRequired,
 };

@@ -15,11 +15,10 @@ class RevenueAndExpenseController {
 
   static add = (req, res) => {
     const revenueAndExpense = req.body;
-
-    // TODO validations (length, format...)
+    const { userId } = req;
 
     models.revenueAndExpense
-      .insert(revenueAndExpense)
+      .insert(revenueAndExpense, userId)
       .then(() => {
         res.status(201).send({ ...revenueAndExpense });
       })

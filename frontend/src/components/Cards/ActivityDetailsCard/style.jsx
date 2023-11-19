@@ -58,6 +58,19 @@ export default styled.section`
     margin-top: 0.5rem;
   }
 
+  .remove {
+    padding: 12px 20px;
+    background-color: #780bec;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    &:hover {
+      background-color: #5e00ae;
+    }
+  }
+
   .note {
     margin-top: 0.5rem;
   }

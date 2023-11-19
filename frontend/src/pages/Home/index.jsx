@@ -12,7 +12,9 @@ function Home() {
   const [activities, setActivities] = useState([]);
   useEffect(() => {
     axios
-      .get(`${import.meta.env.VITE_BACKEND_URL}${"/activity"}`)
+      .get(`${import.meta.env.VITE_BACKEND_URL}${"/activity"}`, {
+        withCredentials: true,
+      })
       .then(({ data }) => {
         setActivities(data);
       });
@@ -63,7 +65,7 @@ function Home() {
         .map((activity) => (
           <Link to={`/activity-detail/${activity.id}`}>
             <ActivityCard
-              key={activity.name}
+              key={activity.id}
               date={`${date(activity.date)}`}
               operator={activity.type_id === 1 ? "-" : "+"}
               amount={activity.amount}
